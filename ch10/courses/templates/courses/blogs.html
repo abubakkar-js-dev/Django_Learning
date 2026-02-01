@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Blog Posts</h1>
+            {% comment %} <nav>
+                <a href="{% url 'courses:home' %}">Home</a>
+                <a href="{% url 'courses:courses' %}">Courses</a>
+                <a href="{% url 'courses:blogs' %}">Blogs</a>
+            </nav> {% endcomment %}
+        </header>
+
+        <main>
+            <section class="blogs">
+                <article class="blog-post">
+                    <h2>Getting Started with Django</h2>
+                    <p class="meta">Posted on <time>2024-01-15</time></p>
+                    <p>Django is a powerful Python web framework that follows the MTV architecture. Learn the basics and start building web applications today.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </article>
+
+                <article class="blog-post">
+                    <h2>Django Models Explained</h2>
+                    <p class="meta">Posted on <time>2024-01-20</time></p>
+                    <p>Understand how Django models work and how to define your database schema using Python classes instead of SQL.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </article>
+
+                <article class="blog-post">
+                    <h2>Views and Templates</h2>
+                    <p class="meta">Posted on <time>2024-01-25</time></p>
+                    <p>Explore Django views and templates to create dynamic web pages and handle user requests efficiently.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Django Learning. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
