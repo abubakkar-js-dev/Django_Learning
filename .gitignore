@@ -1,0 +1,36 @@
+# Virtual Environments
+venv/
+env/
+ENV/
+.venv
+
+# Django
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+db.sqlite3
+db.sqlite3-journal
+/media
+/static
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Dependencies
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Testing
+.coverage
+htmlcov/
+
+# Project files
+*.log
+.pytest_cache/
