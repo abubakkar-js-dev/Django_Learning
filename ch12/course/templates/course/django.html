@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Django here</title>
+    </head>
+    <body>
+        <h2>Follow the tutorial step by step to learn django effectively</h2>
+        {% comment %} 1.0 Variable  {% endcomment %}
+        {% comment %} <h3>Variable</h3>
+        <p>Course: {{cname}} {% endcomment %}
+
+        {% comment %} 1.1 Variable  {% endcomment %}
+        {% comment %} <h3>Variable</h3>
+        <p>Course: {{cname}} </p>
+        <p>Duration: {{duration}} </p>
+        <p>Total Seats: {{seats}}</p> {% endcomment %}
+
+        {% comment %} 1.1 Variable  {% endcomment %}
+        {% comment %} <h3>Filter</h3>
+        <p>Course: {{cname | upper}} </p>
+        <p>Duration: {{duration}} </p>
+        <p>Total Seats: {{seats}}</p>
+        <p>{{description | truncatewords:9}}</p>
+
+        <h3>some more filter here: </h3>
+        <p>Course: {{cname | lower }} </p>
+        <p>Course: {{cname | capfirst }} </p>
+        <p>Course: {{cname | default:"none" }} </p>
+        <p>Course: {{cname | length }} </p>
+        <p>{{cname | truncatechars:5}}</p>
+        <p>Course: {{cname | slice:"2" }} </p> {% endcomment %}
+
+        {% comment %} 1.2 Date  {% endcomment %}
+        <h2> Date time </h2>
+        <p>{{dt}}</p>
+        <p>{{dt | date}}</p>
+    </body>
+</html> 
