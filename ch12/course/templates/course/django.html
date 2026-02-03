@@ -33,8 +33,65 @@
         <p>Course: {{cname | slice:"2" }} </p> {% endcomment %}
 
         {% comment %} 1.2 Date  {% endcomment %}
-        <h2> Date time </h2>
+        {% comment %} <h2> Date time </h2>
         <p>{{dt}}</p>
         <p>{{dt | date}}</p>
+        <p>{{dt | date:"D d m y"}}</p>
+        <p>{{dt | time}}</p>
+        <p>{{dt | time:'H:i'}}</p>
+        <p>{{dt | date:"SHORT_DATE_FORMAT"}}</p>
+        <p>TIME: {{dt | time:'TIME_FORMAT'}}</p>
+        <p> DATE: {{dt | date:'DATE_FORMAT'}}</p> {% endcomment %}
+
+        {% comment %} 2 Float  {% endcomment %}
+        {% comment %} <h2>Floating number format</h2>
+        <p>Value 1: {{v1}} </p>
+        <p>Value 2: {{v2}} </p>
+        <p>Value 3: {{v3}} </p>
+        <strong>(Formated)</strong>
+        <p>Value 1: {{v1 | floatformat:3}} </p>
+        <p>Value 2: {{v2 | floatformat:2}} </p>
+        <p>Value 3: {{v3 | floatformat}} </p>
+
+        <p>Value 1: {{v1 | floatformat:0}} </p>
+        <p>Value 2: {{v2 | floatformat:-2}} </p>
+        <p>Value 3: {{v3 | floatformat:-2}} </p> {% endcomment %}
+
+        {% comment %} 2 Float  {% endcomment %}
+        <h3>IF and ELSE </h3>
+        {% comment %} {% if name  %}
+            <h3>Course: {{name}} </h3>
+        {% endif %} {% endcomment %}
+
+        {% comment %} 3 if  {% endcomment %}
+
+        {% comment %} {% if name and available %}
+            <h3>Course: {{name}} </h3>
+            {% else %}
+            <h3> No courses available </h3>
+        {% endif %} {% endcomment %}
+
+        {% comment %} 4.1 if  {% endcomment %}
+
+        {% comment %} {% if name == 'Django' and name|length > 3 %}
+            <h3>Course: {{name}} </h3>
+            {% else %}
+            <h3> No courses available </h3>
+        {% endif %} {% endcomment %}
+
+        {% comment %} 5 for loop  {% endcomment %}
+        <h2>Available Courses</h2>
+        <ul>
+            {% for course in courses  %}
+            <li>
+                
+                <strong>
+                    {{ forloop.counter }}.
+                    {{course.name}}
+                </strong>
+                ({{ course.duration }}, Level: {{ course.level }})
+            </li>
+            {% endfor %}
+        </ul>
     </body>
 </html> 
