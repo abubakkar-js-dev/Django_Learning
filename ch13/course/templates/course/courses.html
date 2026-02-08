@@ -1,0 +1,23 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Course</title>
+    <link rel="stylesheet" href="{% static 'course/css/style.css' %}">
+
+  </head>
+  <body>
+    <h1 class="heading">All Courses Access Here</h1>
+    <p class="para">
+      This is a short paragraph describing the course. Welcome and enjoy
+      learning!
+    </p>
+
+    <button class="btn" onclick='greet()' id="clickMe">Click me</button>
+    <img src="{% static 'course/images/happy.jpg' %}" alt="Happy" />
+
+  <script src="{% static 'course/js/scripts.js' %}"></script>
+  </body>
+</html>
