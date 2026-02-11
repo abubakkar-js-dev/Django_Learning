@@ -8,7 +8,7 @@
     <title>
      {% block title %}{% endblock title %}
     | Way of Django </title>
-    <link rel="stylesheet" href="{% static "core/css/style.css" %}">
+
     {% block extra_css %}{% endblock extra_css %}
 </head>
 <body>
@@ -21,8 +21,12 @@
     <h1>Home page here</h1>
     {% endblock heading %}
 
+
+
     {% block footer %}
     <footer>Footer For All</footer>
     {% endblock footer %}
+
+
 </body>
 </html>

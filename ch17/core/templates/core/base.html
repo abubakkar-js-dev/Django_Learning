@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load django_bootstrap5 %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>
+     {% block title %}{% endblock title %}
+    | Way of Django </title>
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<body>
+     <ul>
+        <li>Home</li>
+        <li>Django</li>
+        <li>Python</li>
+    </ul>
+    {% block heading %} 
+    <h2>Home page here</h2>
+    {% endblock heading %}
+
+        <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="btn btn-dark">Dark</button>
+
+    {# Display django.contrib.messages as Bootstrap alerts #}
+{% comment %} {% bootstrap_messages %} {% endcomment %}
+
+<div class="mb-3"> <!-- wrapper start -->
+    <label for="name" class="form-label">Email address</label> <!-- label -->
+    <input type="text" class="form-control" id="name" aria-describedby="nameHelp"> <!-- field -->
+    <div id="nameHelp" class="form-text">An alias is fine.</div> <!-- help text -->
+    <div class="valid-feedback">Looks good!</div> <!-- validation text -->
+</div>
+
+    {% block footer %}
+    <footer>Footer For All</footer>
+    {% endblock footer %}
+</body>
+</html>
