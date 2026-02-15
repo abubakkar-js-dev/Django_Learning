@@ -1,0 +1,29 @@
+{% load static tailwind_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>
+     {% block title %}{% endblock title %}
+    | Way of Django </title>
+    {% comment %} <link rel='stylesheet' href={% static "/css/dist/styles.css" %} > {% endcomment %}
+    {% tailwind_css %}
+</head>
+<body>
+     <ul>
+        <li>Home</li>
+        <li>Django</li>
+        <li>Python</li>
+    </ul>
+    {% block heading %} 
+    <h2 class="text-gray-100 bg-orange-400 text-2xl">Home page here</h2>
+    {% endblock heading %}
+
+    {% block footer %}
+    <footer class="text-xl">Footer For All</footer>
+    {% endblock footer %}
+</body>
+</html>
