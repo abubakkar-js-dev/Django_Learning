@@ -1,0 +1,12 @@
+{% extends "core/base.html" %}
+{% block title %}
+    Django
+{% endblock title %}
+    {% block heading %}
+    <h2> Learn Django Here </h2>
+    {% endblock heading %}
+    {% block footer %}
+    <h2>Course: {{name}}</h2>
+    {% include "course/partials/topCourse.html" %}
+    <footer>Django footer</footer>
+    {% endblock footer %}

@@ -1,0 +1,18 @@
+{% extends "core/base.html" %}
+{% block title %}
+    Python
+{% endblock title %}
+    {% block heading %}
+    <h2> Learn Python Here </h2>
+    {% endblock heading %}
+
+{% block footer %}
+
+<footer>
+    {% include "course/partials/topCourse.html" %}
+    <br><hr><br>
+    {% include "course/partials/topCourse.html" with name="Django 5.x.x" %}
+    {% comment %} not found here {% endcomment %}
+    Footer: {{name}} 
+</footer>
+{% endblock footer %}

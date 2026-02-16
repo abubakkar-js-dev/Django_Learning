@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>
+     {% block title %}{% endblock title %}
+    | Way of Django </title>
+    <link href="../../static/core/css/main.css" rel="stylesheet">
+</head>
+<body class="container mx-auto bg-amber-100">
+
+    {% include "core/components/navbar.html" %}
+    
+    <br><br>
+    <hr />
+    <br><br>
+
+
+    {% include "core/components/hero.html" %}
+    {% block heading %} 
+    <h2 class="">Home page here</h2>
+    {% endblock heading %}
+
+    {% block footer %}
+    <footer>Footer For All</footer>
+    {% endblock footer %}
+</body>
+</html>
