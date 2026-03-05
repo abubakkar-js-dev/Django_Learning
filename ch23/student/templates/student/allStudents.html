@@ -16,6 +16,8 @@
                 <p><strong>Email:</strong> {{ student.email }}</p>
                 <p><strong>Roll Number:</strong> {{ student.roll_number }}</p>
                 <p><strong>Grade:</strong> {{ student.grade }}</p>
+                <!--<a href="/students/{{student.id}}">get details</a>-->
+                <a href="{% url "student_details" student.id %}">get details</a>
             </div>
         {% endfor %}
     {% else %}
